@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.content.Intent
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,15 +13,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId) {
-            R.id.button2 -> {
-                val intent = Intent(applicationContext, SubActivity1::class.java)
-                startActivity(intent)
-            }
-        }
-
-        return super.onOptionsItemSelected(item)
+    fun onButton2Click(view: View) {
+        val intent = Intent(applicationContext, SubActivity1::class.java)
+        startActivity(intent)
     }
 }
